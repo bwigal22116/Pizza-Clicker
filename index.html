@@ -44,6 +44,7 @@ updateDisplay(); // Initial display
   
     function PizzaClicked() {
   pizza += 1;
+       localStorage.setItem('pizza', pizza);
   updateDisplay();
 }
 
