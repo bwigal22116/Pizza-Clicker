@@ -37,4 +37,21 @@ updateDisplay(); // Initial display
   pizza += 1;
   updateDisplay();
 }
+
+  const cookieValue = document.cookie
+  .split('; ')
+  .find(cookie => cookie.startsWith('pizza='))
+  ?.split('=')[1];
+
+if (!cookieValue) {
+  // Optionally set pizzaValue to a default value here:
+  pizzaValue = ''; // or any desired default
+} else {
+  console.log(`Value of "settled_pizza" cookie: ${cookieValue}`);
+  pizzaValue = cookieValue;
+}
+let pizza = pizzaValue
+// Use pizzaValue further in your code...
+
+
 </script>
