@@ -11,11 +11,8 @@
     background-color: #F0AB02;
   }
   .img {
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    width: 275;
+    margin: 0 auto;
+    width: 300;
     height: auto;
   }
 .counter {
@@ -33,8 +30,20 @@ let pizza = 0
 }
 
 updateDisplay(); // Initial display
-    
-    
+  
+     // loading Pizza
+   const cookieValue = document.cookie.split('; ').find(cookie => cookie.startsWith('pizza='));
+
+if (cookieValue) {
+  const value = cookieValue.split('=')[1];
+  console.log(`Value of "settled_pizza" cookie: ${value}`);
+} else {
+  console.log('Cookie "settled_pizza" not found.');
+}
+
+  let pizza = cookieValue
+
+  
     function PizzaClicked() {
   pizza += 1;
   updateDisplay();
