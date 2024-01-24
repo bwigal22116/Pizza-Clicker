@@ -3,19 +3,24 @@
 <p class="counter" id="variable-value" style="font-family: Rockwell; text-align: center;"></p>
 <br>
 <div class="container">
-  <img class="img" src="assets/IMG_3673-removebg-preview 2.png" onclick="PizzaClicked()">
+  <img class="img" src="assets/IMG_3673-removebg-preview 2.png" onclick="PizzaClicked()" class="bottom-image">
 </div>  
 
 <style>
+  img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Optional, for full-width image */
+}
+
+  
   body {
     background-color: #F0AB02;
   }
   .img {
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    width: 275;
+    margin: 0 auto;
+    width: 300;
     height: auto;
   }
 .counter {
@@ -24,34 +29,24 @@
 </style>
 <script>
   
-let pizza = localStorage.getItem("pizza");
+let pizza = 0
     
-const storedData = localStorage.getItem("pizza");
-
-// Check if data was found
-if (storedData) {
-  // Use the retrieved data
-  console.log(storedData);
-} else {
-  let pizza = 1
-  updateDisplay();
-}
-
     function updateDisplay() {
   const displayElement = document.getElementById("variable-value");
       document.cookie = "Pizza=" + pizza;
   displayElement.textContent = pizza;
+      
 }
 
 updateDisplay(); // Initial display
-    
-    
+  
+
+  
     function PizzaClicked() {
   pizza += 1;
-      localStorage.setItem("pizza", pizza); // Key and value pair
   updateDisplay();
-      
-      
-
 }
+
+  
+
 </script>
