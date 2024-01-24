@@ -24,13 +24,21 @@
 </style>
 <script>
   
+let pizza = localStorage.getItem("pizza");
+    
+const storedData = localStorage.getItem("pizza");
 
-    !
-var x = localStorage.getItem("pizza");
+// Check if data was found
+if (storedData) {
+  // Use the retrieved data
+  console.log(storedData);
+} else {
+  let pizza = 0
+}
 
     function updateDisplay() {
   const displayElement = document.getElementById("variable-value");
-      
+      document.cookie = "Pizza=" + pizza;
   displayElement.textContent = pizza;
 }
 
