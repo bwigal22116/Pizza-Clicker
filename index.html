@@ -27,6 +27,7 @@ let pizza = 0
   const displayElement = document.getElementById("variable-value");
       document.cookie = "Pizza=" + pizza;
   displayElement.textContent = pizza;
+      
 }
 
 updateDisplay(); // Initial display
@@ -49,8 +50,9 @@ if (!cookieValue) {
 } else {
   console.log(`Value of "settled_pizza" cookie: ${cookieValue}`);
   pizzaValue = cookieValue;
+  let pizza = pizzaValue
 }
-let pizza = pizzaValue
+
 // Use pizzaValue further in your code...
 
 
