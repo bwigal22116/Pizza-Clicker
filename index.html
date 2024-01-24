@@ -31,17 +31,6 @@ let pizza = 0
 
 updateDisplay(); // Initial display
   
-     // loading Pizza
-   const cookieValue = document.cookie.split('; ').find(cookie => cookie.startsWith('pizza='));
-
-if (cookieValue) {
-  const value = cookieValue.split('=')[1];
-  console.log(`Value of "settled_pizza" cookie: ${value}`);
-} else {
-  console.log('Cookie "settled_pizza" not found.');
-}
-
-  let pizza = cookieValue
 
   
     function PizzaClicked() {
