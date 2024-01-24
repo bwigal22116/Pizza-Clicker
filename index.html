@@ -7,12 +7,17 @@
 </div>  
 
 <style>
-  img {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); /* Adjusts for vertical centering */
+  body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures content fills the viewport */
 }
+
+img {
+  margin: auto; /* Centers horizontally and vertically */
+  margin-top: auto; /* Pushes image to bottom if content above */
+}
+
 
 
   
