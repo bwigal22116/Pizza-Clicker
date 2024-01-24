@@ -48,8 +48,7 @@ updateDisplay(); // Initial display
   updateDisplay();
 }
 
-  window.addEventListener('load', () => {
-  // Check if a value for "pizza" exists in local storage
+  
   if (!localStorage.getItem('pizza')) {
     // Set the value to 0 in local storage if it doesn't exist
     localStorage.setItem('pizza', 0);
