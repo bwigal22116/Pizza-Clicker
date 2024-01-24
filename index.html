@@ -3,28 +3,19 @@
 <p class="counter" id="variable-value" style="font-family: Rockwell; text-align: center;"></p>
 <br>
 <div class="container">
-  <img class="img" src="assets/IMG_3673-removebg-preview 2.png" onclick="PizzaClicked()" class="bottom-image">
+  <img class="img" src="assets/IMG_3673-removebg-preview 2.png" onclick="PizzaClicked()">
 </div>  
 
 <style>
-  
-.img {
-  position: fixed;
-  bottom: 0;
-  left: 57%;
-  transform: translateX(-50%);
-}
-
-
-
-
-  
   body {
     background-color: #F0AB02;
   }
   .img {
-    margin: 0 auto;
-    width: 300;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    width: 275;
     height: auto;
   }
 .counter {
@@ -39,18 +30,13 @@ let pizza = 0
   const displayElement = document.getElementById("variable-value");
       document.cookie = "Pizza=" + pizza;
   displayElement.textContent = pizza;
-      
 }
 
 updateDisplay(); // Initial display
-  
-
-  
+    
+    
     function PizzaClicked() {
   pizza += 1;
   updateDisplay();
 }
-
-  
-
 </script>
