@@ -11,8 +11,8 @@
     background-color: #F0AB02;
   }
   .img {
-    margin: 50 auto;
-    width: 225;
+    margin: 0 auto;
+    width: 300;
     height: auto;
   }
 .counter {
@@ -20,10 +20,12 @@
 }
 </style>
 <script>
+  
 let pizza = 0
     
     function updateDisplay() {
   const displayElement = document.getElementById("variable-value");
+      document.cookie = "Pizza=" + pizza;
   displayElement.textContent = pizza;
 }
 
