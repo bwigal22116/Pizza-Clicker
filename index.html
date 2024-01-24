@@ -24,16 +24,16 @@
 </style>
 <script>
   
-let pizza = localStorage.getItem("pizza");
+
     
 const storedData = localStorage.getItem("pizza");
 
 // Check if data was found
 if (storedData) {
   // Use the retrieved data
-  console.log(storedData);
+  let pizza = localStorage.getItem("pizza");
 } else {
-  let pizza = 0
+  let pizza = 1
 }
 
     function updateDisplay() {
