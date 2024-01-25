@@ -49,14 +49,7 @@ updateDisplay(); // Initial display
 }
 
   
-  if (!localStorage.getItem('pizza')) {
-    // Set the value to 0 in local storage if it doesn't exist
-    localStorage.setItem('pizza', 1);
-    updateDisplay();
-  }
-  else 
-  // Retrieve the value from local storage and set it to the "pizza" variable
-  let pizza = localStorage.getItem('pizza')
+let pizza = localStorage.getItem('pizza', 0);
 
   // Use the pizza variable as needed
   console.log('Pizza from local storage:', pizza);
