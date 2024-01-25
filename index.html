@@ -34,8 +34,8 @@ position: absolute;
 </style>
 
 <script>
- 
-
+   // Var
+let ClickPerPress = 1
   // Pizza Saver
   let pizza = parseInt(localStorage.getItem('pizza')) || 0; // Parse the value from local storage to ensure it's a number
 
@@ -48,7 +48,7 @@ position: absolute;
 
   // When Pizza Clicked
   function PizzaClicked() {
-    pizza++; // Increment the pizza count
+    pizza+ClickPerPress; // Increment the pizza count
     localStorage.setItem('pizza', pizza);
     updateDisplay();
   }
