@@ -4,55 +4,44 @@
 <br>
 <div class="container">
   <img class="img" src="assets/IMG_3673-removebg-preview 2.png" onclick="PizzaClicked()" class="bottom-image">
-</div>  
+</div>
 
 <style>
   img {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%; /* Optional, for full-width image */
-}
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Optional, for full-width image */
+  }
 
-  
   body {
     background-color: #F0AB02;
   }
+
   .img {
     margin: 0 auto;
     width: 300;
     height: auto;
   }
-.counter {
-  font-size: 60px;
-}
+
+  .counter {
+    font-size: 60px;
+  }
 </style>
+
 <script>
-  
+  let pizza = localStorage.getItem('pizza') || 0; // Get initial value from local storage or set to 0
 
-    
-    function updateDisplay() {
-  const displayElement = document.getElementById("variable-value");
-      
-  displayElement.textContent = pizza;
-      
-}
+  function updateDisplay() {
+    const displayElement = document.getElementById("variable-value");
+    displayElement.textContent = pizza;
+  }
 
-updateDisplay(); // Initial display
-  
+  updateDisplay(); // Initial display
 
-  
-    function PizzaClicked() {
-  pizza += 1;
-       localStorage.setItem('pizza', pizza);
-  updateDisplay();
-}
-
-  
-
-  // Use the pizza variable as needed
-  console.log('Pizza from local storage:', pizza);
-});
-
-
+  function PizzaClicked() {
+    pizza += 1;
+    localStorage.setItem('pizza', pizza);
+    updateDisplay();
+  }
 </script>
