@@ -34,6 +34,9 @@ position: absolute;
 </style>
 
 <script>
+ 
+
+  // Pizza Saver
   let pizza = parseInt(localStorage.getItem('pizza')) || 0; // Parse the value from local storage to ensure it's a number
 
   function updateDisplay() {
@@ -43,11 +46,16 @@ position: absolute;
 
   updateDisplay(); // Initial display
 
+  // When Pizza Clicked
   function PizzaClicked() {
     pizza++; // Increment the pizza count
     localStorage.setItem('pizza', pizza);
+     // Export Pizza Var
+export const Pizza = pizza;
     updateDisplay();
   }
+
+
 </script>
-
-
+  // Random Event Initialize 
+<script src="myscripts.js"></script>
